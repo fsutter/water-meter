@@ -4,9 +4,9 @@
 
 ### Install system packages
 ```bash
-sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config
-sudo apt install python3-pip
-sudo apt install sqlite3
+sudo apt install autoconf build-essential cmake libncurses-dev\
+  librtlsdr-dev libtool libusb-1.0-0-dev pkg-config python3-pip\
+  rtl-sdr sqlite3
 ```
 
 ### Install libraries

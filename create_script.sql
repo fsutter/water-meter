@@ -35,3 +35,34 @@ CREATE VIEW consumption AS
         measure
     ORDER BY
         measure_id;
+
+CREATE VIEW daily_consumption AS
+    SELECT
+        day,
+        month,
+        year,
+        SUM(volume) AS volume
+    FROM
+        consumption
+    GROUP BY
+        day,
+        month,
+        year
+    ORDER BY
+        year,
+        month,
+        day;
+
+CREATE VIEW monthly_consumption AS
+    SELECT
+        month,
+        year,
+        SUM(volume) AS volume
+    FROM
+        consumption
+    GROUP BY
+        month,
+        year
+    ORDER BY
+        year,
+        month;        
